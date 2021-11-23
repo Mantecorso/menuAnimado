@@ -12,7 +12,123 @@
     background: #1863ff;
 }
 
+.navegador {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background: #130748;
+    transition: 0.5s;
+    overflow: hidden;
+}
 
+.navegador:hover, .navegador.active {
+    width: 240px;
+}
+
+.navegador ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    list-style: none;
+}
+
+.navegador ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navegador ul li:hover {
+    background: crimson;
+}
+
+.navegador ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+
+}
+
+.navegador ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+
+}
+
+.navegador ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.tog3 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    background: #330748;
+    box-shadow: 0 10px 20px rgba(0,0,0,.08);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tog3 span {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background: #1863ff;
+    border-radius: 4px;
+    transition: .5s;
+}
+
+.tog3 span:nth-child(1) {
+    transform: translateY(-15px);
+    width: 25px;
+    left: 15px;
+}
+
+.tog3 span:nth-child(2) {
+    transform: translateY(15px);
+    width: 15px;
+    left: 15px;
+}
+
+.tog3.active span:nth-child(1) {
+    width: 40px;
+    transform: translateY(0px) rotate(45deg);
+    transition-delay: .125s;
+}
+
+.tog3.active span:nth-child(2) {
+    width: 40px;
+    transform: translateY(0px) rotate(315deg);
+    transition-delay: .25s;
+}
+
+.tog3.active span:nth-child(3) {
+    transform: translateX(60px);
+}
+
+.tag3:hover {
+    background: crimson;
+}
 
 .tog {
     width: 100%;
